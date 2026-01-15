@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Google Domain Harvester",
+  "version": "1.1",
+  "description": "Collect root domains from Google search results while browsing",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.google.com/*",
+        "https://www.google.co.in/*",
+        "https://www.google.co.uk/*",
+        "https://www.google.ca/*",
+        "https://www.google.com.au/*"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}
